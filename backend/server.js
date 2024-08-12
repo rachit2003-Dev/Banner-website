@@ -6,9 +6,18 @@ const mysql = require('mysql2');
 const app = express();
 const port = 9090;
 
+const allowedOrigins = ['https://66ba6c90450da323bf65c4b7--banner-website.netlify.app/'];
+
 app.use(cors({
-  origin: 'https://banner-website.netlify.app',
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
 }));
+
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
