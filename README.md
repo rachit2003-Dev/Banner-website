@@ -19,12 +19,6 @@ Additional Libraries: axios, jsPDF, html2canvas
 2) Give any image link, description and timer to display and add them into the database.
 3) For updating you can choose anything from the image given in the link which was uploaded during the testing time.
     [database-img](https://drive.google.com/file/d/1cltRrjtH8AdG87ssNiXjazG6e-8oe8RJ/view?usp=drive_link)
-4) Also you can log into MySQL Database and then test accordingly
-    Go to: [phpmyadmin.co](https://phpmyadmin.co/)
-    Credentials:
-        Server: sql12.freesqldatabase.com
-        Username: sql12725296
-        Password: he5tvpJzUF
 
 
 
