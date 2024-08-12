@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const fetchBannerData = async () => {
       try {
-        const result = await axios('/api/banner');
+        const result = await axios('https://banner-website.onrender.com/api/banner');
         setBannerData(result.data);
         setBannerVisible(result.data.isVisible);
       } catch (error) {

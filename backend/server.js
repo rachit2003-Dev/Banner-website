@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+app.use(cors({
+  origin: 'https://banner-website.netlify.app',
+}));
 const mysql = require('mysql2');
 
 const app = express();

@@ -60,7 +60,7 @@ function Dashboard({ onBannerVisibilityChange, setBannerData }) {
     }
 
     try {
-      const response = await axios.post('/api/updateBanner', {
+      const response = await axios.post('https://banner-website.onrender.com/api/updateBanner', {
         id,
         description,
         timer,
@@ -77,7 +77,7 @@ function Dashboard({ onBannerVisibilityChange, setBannerData }) {
 
   const addBanner = async () => {
     try {
-      const response = await axios.post('/api/addBanner', {
+      const response = await axios.post('https://banner-website.onrender.com/api/addBanner', {
         description,
         timer,
         link,

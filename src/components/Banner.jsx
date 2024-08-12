@@ -100,7 +100,7 @@ function Banner({ data }) {
   const toggleImageVisibility = async () => {
     try {
       const newImageVisibility = !imageVisible;
-      await axios.post('/api/updateBanner', {
+      await axios.post('https://banner-website.onrender.com/api/updateBanner', {
         ...data,
         imageVisible: newImageVisibility,
       });
