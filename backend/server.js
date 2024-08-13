@@ -6,7 +6,7 @@ const mysql = require('mysql2');
 const app = express();
 const port = 9090;
 
-const allowedOrigins = ['https://66ba6c90450da323bf65c4b7--banner-website.netlify.app/'];
+const allowedOrigins = ['https://banner-website.netlify.app'];
 
 app.use(cors({
   origin: function (origin, callback) {
