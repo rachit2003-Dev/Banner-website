@@ -51,7 +51,7 @@ app.get('/api/banner/:id', (req, res) => {
   });
 });
 
-app.get('/api/updateBanner', (req, res) => {
+app.post('/api/updateBanner', (req, res) => {
   const { id, description, timer, link, isVisible } = req.body;
   if (!id) {
     res.status(400).send('ID is required to update the banner');
@@ -85,7 +85,7 @@ app.get('/api/updateBanner', (req, res) => {
   });
 });
 
-app.get('/api/addBanner', (req, res) => {
+app.post('/api/addBanner', (req, res) => {
   const { description, timer, link } = req.body;
   db.query(
     'INSERT INTO banner (description, timer, link, isVisible) VALUES (?, ?, ?, ?)',
